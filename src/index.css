@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 32 100% 98%;
+    --foreground: 20 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 10%;
+
+    --primary: 16 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 32 100% 95%;
+    --secondary-foreground: 20 14% 10%;
+
+    --muted: 32 50% 96%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 32 30% 90%;
+    --input: 32 30% 90%;
+    --ring: 16 90% 58%;
+
+    --radius: 0.75rem;
+
+    --gradient-warm: linear-gradient(135deg, hsl(16 90% 58%), hsl(25 95% 53%));
+    --gradient-hero: linear-gradient(135deg, hsl(16 90% 58%) 0%, hsl(25 95% 53%) 50%, hsl(32 100% 50%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(32 100% 98%) 100%);
+    
+    --shadow-soft: 0 2px 8px hsla(16, 90%, 58%, 0.08);
+    --shadow-medium: 0 4px 16px hsla(16, 90%, 58%, 0.12);
+    --shadow-large: 0 8px 32px hsla(16, 90%, 58%, 0.16);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 20 20% 8%;
+    --foreground: 32 50% 95%;
+
+    --card: 20 18% 12%;
+    --card-foreground: 32 50% 95%;
+
+    --popover: 20 18% 12%;
+    --popover-foreground: 32 50% 95%;
+
+    --primary: 16 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 18% 16%;
+    --secondary-foreground: 32 50% 95%;
+
+    --muted: 20 18% 16%;
+    --muted-foreground: 32 20% 65%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 18% 20%;
+    --input: 20 18% 20%;
+    --ring: 16 90% 58%;
+    
+    --gradient-warm: linear-gradient(135deg, hsl(16 90% 48%), hsl(25 95% 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(16 90% 48%) 0%, hsl(25 95% 43%) 50%, hsl(32 100% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(20 18% 12%) 0%, hsl(20 18% 16%) 100%);
+    
+    --shadow-soft: 0 2px 8px hsla(16, 90%, 38%, 0.15);
+    --shadow-medium: 0 4px 16px hsla(16, 90%, 38%, 0.20);
+    --shadow-large: 0 8px 32px hsla(16, 90%, 38%, 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
